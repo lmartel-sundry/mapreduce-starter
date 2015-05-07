@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
 import sys
 import random
 from collections import defaultdict
@@ -24,10 +25,11 @@ def reducer(key, values):
 
 
 def output(person_a, person_b, mutual_friends):
-    print '%s, %s -> %s' % (person_a, person_b, mutual_friends and ' '.join(mutual_friends))
+    print('%s, %s -> %s' % (person_a, person_b, mutual_friends and ' '.join(mutual_friends)))
 
 
 if __name__ == "__main__":
+    print('Reducer step starting.', file=sys.stderr)
     values_by_key = defaultdict(list)
 
     # Parse input
