@@ -25,7 +25,8 @@ def output(key, value):
 
 
 if __name__ == "__main__":
-    print('Mapper step starting.', file=sys.stderr)
+    print('====================', file=sys.stderr)
+    print('Mapper step starting\n', file=sys.stderr)
     for line in sys.stdin:
         # Parse input
         person, friends = line.strip().split(' -> ')

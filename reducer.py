@@ -29,7 +29,8 @@ def output(person_a, person_b, mutual_friends):
 
 
 if __name__ == "__main__":
-    print('Reducer step starting.', file=sys.stderr)
+    print('=====================', file=sys.stderr)
+    print('Reducer step starting\n', file=sys.stderr)
     values_by_key = defaultdict(list)
 
     # Parse input
