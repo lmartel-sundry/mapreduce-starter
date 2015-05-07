@@ -8,9 +8,8 @@ import sys
 # friends = ['Bob', 'Steve', 'Cindy']
 def mapper(person, friends):
 
-    # TODO
-
-    output(None, None)
+    for friend in friends:
+        output(sorted([person, friend]), friends)
 
 
 def output(key, value):

@@ -18,9 +18,9 @@ from collections import defaultdict
 # Reducer 2 input: ('B', 'C'), [['C', 'D', 'E', 'F']]
 def reducer(key, values):
 
-    # TODO
-
-    output(None, None, None)
+    friend_sets = [set(l) for l in values]
+    mutual_friends = set.intersection(*friend_sets)
+    output(key[0], key[1], sorted(mutual_friends))
 
 
 def output(person_a, person_b, mutual_friends):
