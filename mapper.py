@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from __future__ import print_function
 import sys
 
 ### CHANGE ONLY THIS FUNCTION
@@ -19,10 +20,11 @@ def output(key, value):
     if type(value) is list or type(value) is tuple:
         value = ' '.join(value)
         
-    print '%s -> %s' % (key, value)
+    print('%s -> %s' % (key, value))
 
 
 if __name__ == "__main__":
+    print('Mapper step starting.', file=sys.stderr)
     for line in sys.stdin:
         # Parse input
         person, friends = line.strip().split(' -> ')
